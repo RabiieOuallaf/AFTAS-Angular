@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-admin-dashboard',
@@ -8,7 +9,12 @@ import { Component } from '@angular/core';
 export class AdminDashboardComponent {
   role: string | null;
 
-  constructor() {
+  constructor(private router: Router) {
     this.role = localStorage.getItem('role');
+  }
+
+  logout() {
+    localStorage.clear()
+    this.router.navigate(['/']);
   }
 }

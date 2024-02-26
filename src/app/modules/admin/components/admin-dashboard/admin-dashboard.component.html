@@ -25,15 +25,22 @@
               </div>
           </div>
       </div>
+      
+      
   </aside>
   <main class="ml-60 pt-16 pb-96 overflow-auto bg-yellow-50">
-      <div class="px-6 py-8">
+    
+    <div class="px-6 py-8">
           <div class="max-w-4xl mx-auto">
               <ng-content></ng-content>
           </div>
       </div>
       <div class="ml-60 pt-16 pb-96 overflow-auto bg-yellow-50">
       </div>
+      <button class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded" (click)="logout()">
+        Logout
+      </button>
   </main>
+  
 </div>
 

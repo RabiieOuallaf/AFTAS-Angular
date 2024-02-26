@@ -7,7 +7,7 @@ import { initFlowbite } from 'flowbite';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'you-Quiz';
+  title = 'aftas';
 
   ngOnInit(): void {
     initFlowbite();

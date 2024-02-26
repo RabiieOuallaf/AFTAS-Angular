@@ -18,5 +18,4 @@ export class AuthService {
     return this.http.post<String>(API_BASE_URL+`/auth/register`, form,{ headers: { Accept: 'application/json' } });
   }
 
-
 }

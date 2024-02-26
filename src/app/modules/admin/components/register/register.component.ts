@@ -14,13 +14,17 @@ export class RegisterComponent {
   constructor(private formBuilder: FormBuilder,private authService: AuthService,private router: Router) { }
 
   ngOnInit(): void {
+    const currentDate = new Date().toISOString().split('T')[0];
+
     this.registerForm = this.formBuilder.group({
-      username: ['', [Validators.required]],
+      name: ['', [Validators.required]],
+      familyName: ['', [Validators.required]],
       email: ['', [Validators.required, Validators.email]],
       password: ['', Validators.required],
       nationality: ['', Validators.required],
       identityDocument: ['', Validators.required],
       identityNumber: ['', Validators.required],
+      accessionDate: [currentDate, Validators.required],
       role: ['ADHERENT', Validators.required]
     });
   }
